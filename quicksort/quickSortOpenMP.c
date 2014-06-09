@@ -118,7 +118,7 @@ int main()
     quicksort(ax,n);
 
     end=omp_get_wtime();
-	time=(double)(end-start)/CLOCKS_PER_SEC;
+	time=(double)(end-start) ;
 
 	printf("\nThis time quickSortOMP.exe runtime=%lf\n\n",time);
 
