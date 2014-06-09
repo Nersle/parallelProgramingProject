@@ -112,12 +112,12 @@ int main()
 
 	clock_t start,end; 
 	double time=0;
-	start=clock();
+	start=omp_get_wtime();
     printf("\n");
 
     quicksort(ax,n);
 
-    end=clock();
+    end=omp_get_wtime();
 	time=(double)(end-start)/CLOCKS_PER_SEC;
 
 	printf("\nThis time quickSortOMP.exe runtime=%lf\n\n",time);
