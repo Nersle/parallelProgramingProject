@@ -48,7 +48,9 @@ int main (int argc, char *argv[])
         for (i=0; i<matrixScale; i++)    
         {
             printf("Thread=%d did row=%d\n",tid,i);
-            for(j=0; j<matrixScale; j++)       
+			#pragma  omp for
+            for(j=0; j<matrixScale; j++) 	
+				#pragma  omp for      
                 for (k=0; k<matrixScale; k++)
                     matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
         }
